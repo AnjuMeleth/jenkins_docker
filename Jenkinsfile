@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        docker 'D1'
+        DockerTool 'D1'
     }
     stages {
         stage('Build') {
@@ -15,7 +15,7 @@ pipeline {
             //}
             steps {
                 //sh 'gradle --version'
-                sh 'docker --version'
+                bat 'docker --version'
             }
         }
     }
